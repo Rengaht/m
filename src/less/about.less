@@ -1,0 +1,73 @@
+
+.info{
+	display: table;
+	position: absolute;
+	top:-150vh;
+	left:0;
+
+	width:100%;	
+	min-height:100vh;
+	
+	background-color: red;
+	
+	z-index:-2;
+	opacity: 1;
+	transition:.3s ease-in-out;
+	
+	&.show{
+		top:0vh;
+		z-index: 100;
+		opacity: 1;
+	}		
+
+	
+	.infoWrap{
+		display: table-row;
+		div{		
+			padding: 10px 20px;
+		}
+	}
+	.logoName{
+		font-size: 3em;		
+		font-family: 'Assistant';
+		line-height: 1em;
+		margin-top: 20px;
+	}
+	.infoChinese{
+
+	}
+	.infoEnglish{
+		
+	}
+
+	.contactInfo{
+		display: inline-block;
+		div{
+			padding: 5px 0px;
+		}
+		span:first-child{
+			margin-right: 20px;
+		}
+
+	}
+	.socialLink{
+		display: inline-block;
+		vertical-align: top;
+		a{
+			margin-right:20px;
+			margin-left:20px;
+			display: inline-block;
+		}
+
+	}
+	.closeInfo{
+		display: table-row;
+		width:100%;
+		.center{
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
+	}
+
+}
+

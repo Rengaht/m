@@ -1,0 +1,27 @@
+{
+  "name": "m",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulp-build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-refresh": "^1.1.0",
+    "gulp-util": "^3.0.7",
+    "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-router": "^2.8.1"
+  },  
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}

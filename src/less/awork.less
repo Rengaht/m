@@ -1,0 +1,57 @@
+.aWork{
+	position: absolute;
+	padding-right: 6.6%;
+	padding-left: 6.6%;
+	div, img{
+		width:100%;
+		margin-bottom:5px;
+	}
+	.aworkTitle{
+		margin-top:20px;
+		div{
+			margin-bottom:0px;	
+		}
+		.english{
+			font-size: 1.33em;	
+			line-height: 1em;	
+			font-family: 'Assistant';
+			text-transform: uppercase;
+		}
+		.workClose{
+			width:auto;
+			position: absolute;
+			top:20px;
+			right:20px;
+
+		}
+	}
+	
+	.AWorkVideo{
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.awork-enter{
+	left:0;
+}
+.awork-enter.awork-enter-active{
+	left:100%;
+	transition:.5s ease-in;
+}
+.awork-leave{
+	left:100%;	
+}
+.awork-leave.awork-leave-active{
+	left:0;
+	transition:.5s ease-in;
+}
