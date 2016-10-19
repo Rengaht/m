@@ -81,22 +81,19 @@ body {
 #_topLogo img {
   width: 32%;
 }
+.childPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .info {
   display: table;
   position: absolute;
-  top: -150vh;
   left: 0;
   width: 100%;
   min-height: 100vh;
   background-color: red;
-  z-index: -2;
-  opacity: 1;
-  transition: 0.3s ease-in-out;
-}
-.info.show {
-  top: 0vh;
-  z-index: 100;
-  opacity: 1;
 }
 .info .infoWrap {
   display: table-row;
@@ -137,18 +134,20 @@ body {
   padding-top: 10px;
 }
 .workList {
-  width: 100%;
-  padding-right: 6.6%;
-  padding-left: 6.6%;
+  width: 100vw;
   padding-top: 20px;
   display: block;
 }
 .workList.hide {
   display: none;
 }
+.workList .wrap {
+  margin-left: 6.6vw;
+  margin-right: 6.6vw;
+}
 .workList .workThumb {
   display: inline-block;
-  width: 42%;
+  width: 42vw;
   margin-bottom: 2.8vw;
 }
 .workList .workThumb.left {
@@ -159,13 +158,25 @@ body {
 }
 .aWork {
   position: absolute;
-  padding-right: 6.6%;
-  padding-left: 6.6%;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: blue;
+  overflow: scroll;
+}
+.aWork .wrap {
+  width: 86.8%;
+  max-height: 100%;
+  margin-left: 6.6%;
+  margin-right: 6.6%;
 }
 .aWork div,
 .aWork img {
   width: 100%;
   margin-bottom: 5px;
+}
+.aWork img:last-child {
+  margin-bottom: 25px;
 }
 .aWork .aworkTitle {
   margin-top: 20px;
@@ -174,7 +185,7 @@ body {
   margin-bottom: 0px;
 }
 .aWork .aworkTitle .english {
-  font-size: 1.33em;
+  font-size: 2em;
   line-height: 1em;
   font-family: 'Assistant';
   text-transform: uppercase;
@@ -198,18 +209,4 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-}
-.awork-enter {
-  left: 0;
-}
-.awork-enter.awork-enter-active {
-  left: 100%;
-  transition: 0.5s ease-in;
-}
-.awork-leave {
-  left: 100%;
-}
-.awork-leave.awork-leave-active {
-  left: 0;
-  transition: 0.5s ease-in;
 }

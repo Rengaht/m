@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 export default class About extends React.Component{
 
 	render(){
 		return(
-			<div className={this.props.className}>
+			<div className="info">
 				<div className="infoWrap">
 					<div className="logoName">Merlin's Mustache Lab</div>
 					<div className="infoChinese">
@@ -17,15 +18,21 @@ export default class About extends React.Component{
 					<div className="contactInfo">
 						<div>
 							<span>T</span>
+							<a href="tel:+886-2-8768-1100#135">
 							<span>+886-2-8768-1100#135</span>
+							</a>
 						</div>
 						<div>
 							<span>E</span>
+							<a href="mailto:merlin.mustache@mmlab.tw">
 							<span>merlin.mustache@mmlab.tw</span>
+							</a>
 						</div>
 						<div>
 							<span>A</span>
+							<a href="http://maps.google.com/?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E6%9D%B1%E8%88%88%E8%B7%AF45%E8%99%9F9F">
 							<span>11070 台北市信義區東興路45號9F</span>
+							</a>
 						</div>
 					</div>
 					<div className="socialLink">
@@ -40,8 +47,10 @@ export default class About extends React.Component{
 	     				</a>
 					</div>									
 				</div>
-				<div className="closeInfo" onClick={this.props.closeInfo}>
-					<img className="center" src="image/up.png"/>										
+				<div className="closeInfo">
+					<Link to="/">
+						<img className="center" src="image/up.png"/>										
+					</Link>
 				</div>
 			</div>
 		);

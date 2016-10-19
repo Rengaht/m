@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import {Link} from 'react-router'
 import * as DConst from '../request_constants'
 
@@ -11,15 +12,18 @@ export default class Work extends React.Component{
 		this.loadData();
 	}
 	loadData(){
-		// let work_url=DConst.URL+DConst.WorkPath+'?'+DConst.Token+'&status=1&sort_order=DESC&columns_show=m_thumb_image';
-		let work_url='data/work.json';
+		let work_url=DConst.URL+DConst.WorkPath+'?'+DConst.Token+'&status=1&sort_order=DESC&columns_show=m_thumb_image';
+		// let work_url='data/work.json';
 		$.ajax({
 			url:work_url,
 			dataType:'json',
 			cache:false,
 			success: function(data){				
 				console.log('data loaded!');
-				this.setState({data:data.rows});				
+				this.setState({data:data.rows});			
+
+				ReactDOM.findDOMNode(this.refs._wrap).scrollTop=0;
+
 			}.bind(this),
 			error: function(xhr, status, err){
 				console.error(this.url, status, err.toString());
@@ -41,7 +45,9 @@ export default class Work extends React.Component{
 
 		return(
 			<div className={this.props.className}>		
-				{workNodes}
+				<div className="wrap" ref="_wrap">
+					{workNodes}
+				</div>
 			</div>
 		);
 	}
@@ -56,6 +62,7 @@ class WorkNode extends React.Component{
 			<Link to={"/work/"+this.props.work.id}>
 				<img src={DConst.FilePath+this.props.work.m_thumb_image.name}/>				
 			</Link>
+
 			</div>
 
 		);

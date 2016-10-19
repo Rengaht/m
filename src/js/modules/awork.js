@@ -1,5 +1,6 @@
 
 import React from 'react'
+import ReactDOM from 'react-dom'
 import {Link} from 'react-router'
 import * as DConst from '../request_constants'
 
@@ -10,11 +11,12 @@ export default class AWork extends React.Component{
 		super(props);			
 		this.state={};
 		this.loadData(this.props.params.id);		
+
 	}
 	loadData(id_){
 		
-		// let url=DConst.URL+DConst.WorkPath+'/'+id_+'?'+DConst.Token;	
-		let url='data/data.json';	
+		let url=DConst.URL+DConst.WorkPath+'/'+id_+'?'+DConst.Token;	
+		// let url='data/data.json';	
 		$.ajax({
 			url:url,
 			dataType:'json',
@@ -34,9 +36,7 @@ export default class AWork extends React.Component{
 		});
 
 	}
-	componentWillMount(){
-        
-  	}
+
 	render(){
 		if(this.state.work){
 
@@ -48,23 +48,31 @@ export default class AWork extends React.Component{
 
 			return(			
 				<div className="aWork" key={this.state.work.id}>
-					<div className="aworkTitle">
-						<div className="english">{this.state.work.title_en}</div>
-						<div>{this.state.work.title_ch}</div>
-						<div>#{this.state.work.year}{this.state.tag_list}</div>		
-						<Link to="/">
-							<img src="image/x.png" className="workClose"/>
-						</Link>				
+					<div className="wrap">
+						<div className="aworkTitle">
+							<div className="english">{this.state.work.title_en}</div>
+							<div>{this.state.work.title_ch}</div>
+							<div>#{this.state.work.year}{this.state.tag_list}</div>		
+							<Link to="/">
+								<img src="image/x.png" className="workClose"/>
+							</Link>				
+						</div>
+						<div className="AWorkVideo" dangerouslySetInnerHTML={{__html:this.state.work.video.html}}/>			
+						{imageNodes}
 					</div>
-					<div className="AWorkVideo" dangerouslySetInnerHTML={{__html:this.state.work.video.html}}/>			
-					{imageNodes}
 				</div>							
 			);
 		}else{
 			return <div/>;
 		}
 	}	
-	
+	// show(id_){
+	// 	this.loadData(id_);
+	// 	ReactDOM.findDOMNode(this).classList.add('show');
+	// }
+	// close(){
+	// 	ReactDOM.findDOMNode(this).classList.remove('show');
+	// }
 }
 
 

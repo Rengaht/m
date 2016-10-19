@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import About from './about'
+import {Link} from 'react-router'
 import Work from './work'
+
+import { RouteTransition } from 'react-router-transition';
+
 
 export default class Main extends React.Component{
 	constructor(props){
@@ -18,11 +21,13 @@ export default class Main extends React.Component{
   	render(){
 		return(
 	    	<div>
-	    		<div id="_topLogo"  onClick={this.toggleInfo}>
-	    			<img src="image/logo.png" className="center"/>	    			
+	    		<div id="_topLogo">
+	    			<Link to="/about">
+	    				<img src="image/logo.png" className="center"/>	    			
+	    			</Link>
 	    		</div>
-	    		<About className={this.state.show_info?"info show":"info"} closeInfo={this.toggleInfo}/>
-	    		<Work className={this.state.show_info?"workList hide":"workList"}></Work>
+	    		<Work className="workList"></Work>
+	    	
 	    	</div>
 	    );
 		
