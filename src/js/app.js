@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router,Route,hashHistory,IndexRoute,useRouterHistory} from 'react-router'
 
-import Main from './modules/main'
-import AWork from './modules/awork'
-import About from './modules/about'
+import Main from './pages/main'
+import AWork from './pages/awork'
+import About from './pages/about'
 
 
 //import createBrowserHistory from 'history/lib/createBrowserHistory';

@@ -1,6 +1,6 @@
 
 .info{
-	display: table;
+	// display: table;
 	position: absolute;
 	// top:-150vh;
 	left:0;
@@ -19,19 +19,18 @@
 	// 	z-index: 100;
 	// 	opacity: 1;
 	// }		
+	.fontWorkText;
 
 	
 	.infoWrap{
-		display: table-row;
-		div{		
-			padding: 10px 20px;
+		// display: table-row;
+		>div{		
+			padding: @vert_margin @out_margin;
 		}
 	}
-	.logoName{
-		font-size: 3em;		
-		font-family: 'Assistant';
-		line-height: 1em;
-		margin-top: 20px;
+	.logoWrap{
+		.fontLogoTitle;
+		margin-top: @vert_margin;
 	}
 	.infoChinese{
 
@@ -61,7 +60,7 @@
 
 	}
 	.closeInfo{
-		display: table-row;
+		// display: table-row;
 		width:100%;
 		.center{
 			padding-bottom: 10px;

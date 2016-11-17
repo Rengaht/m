@@ -1,0 +1,113 @@
+
+@glitch_amp:1px;
+
+@keyframes glitch-anim-left{
+    0% {
+         transform: translate(0);
+    }
+    20% {
+        transform: translate(-@glitch_amp, @glitch_amp);
+    }
+    40% {
+        transform: translate(-@glitch_amp, -@glitch_amp); 
+    }
+    60% {
+        transform: translate(@glitch_amp, @glitch_amp);
+    }
+    80% {
+        transform: translate(@glitch_amp, -@glitch_amp);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+@keyframes glitch-anim-right{
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(@glitch_amp, -@glitch_amp);
+    }
+    40% {
+        transform: translate(@glitch_amp, @glitch_amp);
+    }
+    60% {
+        transform: translate(-@glitch_amp, -@glitch_amp);
+    }
+    80% {
+        transform: translate(-@glitch_amp, @glitch_amp);
+    }
+    100% {
+        transform: translate(0);
+    }
+
+}
+
+.glitch{
+  position: relative;
+  color:white;  
+  z-index: 3;
+  
+  &::before,&::after{
+
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    //clip: rect( 0, 900px, 0, 0 );
+     overflow: hidden;
+  }
+
+  &:hover::before{
+    animation: glitch-anim-left .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    // left:2px;
+    color:red;
+    text-shadow: -1px 0 red;    
+    z-index: -2;
+  }
+  &:hover::after{
+    animation: glitch-anim-right .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    // left:-2px;
+    color:cyan;
+    text-shadow: 1px 0 cyan;  
+    z-index: -1; 
+  }
+
+}
+
+.glitch_always{
+  position: relative;
+  color:white;  
+  z-index: 3;
+
+  &::before,&::after{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    // clip: rect( 0, 900px, 0, 0 );
+    overflow: hidden;
+   
+  }
+
+  &::before{
+    animation: glitch-anim-left .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    // left:2px;
+   color:red;
+    text-shadow: -1px 0 red;    
+    z-index:-2;
+  }
+  &::after{
+    animation: glitch-anim-right .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    // left:-2px;
+    color:cyan;
+    text-shadow: 1px 0 cyan;  
+    z-index: -1; 
+  }
+
+}

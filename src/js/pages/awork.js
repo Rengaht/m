@@ -50,14 +50,14 @@ export default class AWork extends React.Component{
 				<div className="aWork" key={this.state.work.id}>
 					<div className="wrap">
 						<div className="aworkTitle">
-							<div className="english">{this.state.work.title_en}</div>
+							<div className="english" data-text={this.state.work.title_en}>{this.state.work.title_en}</div>
 							<div>{this.state.work.title_ch}</div>
 							<div>#{this.state.work.year}{this.state.tag_list}</div>		
 							<Link to="/">
 								<img src="image/x.png" className="workClose"/>
 							</Link>				
 						</div>
-						<div className="AWorkVideo" dangerouslySetInnerHTML={{__html:this.state.work.video.html}}/>			
+						<WorkVideo src={this.state.work.video}/>			
 						{imageNodes}
 					</div>
 				</div>							
@@ -75,5 +75,24 @@ export default class AWork extends React.Component{
 	// }
 }
 
+
+
+class WorkVideo extends React.Component{
+	render(){
+
+		if(this.props.src.type.includes("embed"))
+			return(
+				<div className="AWorkVideo" dangerouslySetInnerHTML={{__html:this.props.src.html}}>			
+				</div>
+			);
+		else return <div/>;
+		// else if(this.props.src.type.includes("image"))
+		// 	return(
+		// 		<div className="AWorkVideo">			
+		// 			<img src={this.props.src.url}/>
+		// 		</div>
+		// 	);
+	}
+}
 
 

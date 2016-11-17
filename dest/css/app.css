@@ -1,66 +1,57 @@
 @font-face {
-  font-family: mmlabWebTitle;
+  font-family: mtextFont;
+  font-style: normal;
+  src: local('Microsoft JhengHei');
+}
+@font-face {
+  font-family: mtextFont;
+  font-style: normal;
+  src: url(../../../font/Futura-LT-Book.woff);
+  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
+}
+@font-face {
+  font-family: mtitle2Font;
+  src: local('Microsoft JhengHei');
+}
+@font-face {
+  font-family: mtitle2Font;
+  src: url(../../../font/Futura-LT-Bold.woff);
+  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
+}
+@font-face {
+  font-family: mtitle1Font;
+  src: url(../../../font/Futura-Koyu.woff);
+}
+.fontWorkTag {
+  font-family: mtextFont;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  line-height: 180%;
+}
+.fontWorkTitle {
+  font-family: mtitle2Font;
   font-weight: bold;
-  src: local('Microsoft JhengHei');
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
 }
-@font-face {
-  font-family: mmlabWebTitle;
-  font-style: normal;
-  font-weight: 800;
-  src: local('Assistant ExtraBold'), local('Assistant-ExtraBold'), url(https://fonts.gstatic.com/s/assistant/v1/-mTR0sX8a0RsadH4AMDT8Ogdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+.fontAWorkTitle {
+  font-family: mtitle1Font;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
-@font-face {
-  font-family: mmlabWebText;
-  font-style: normal;
-  src: local('Microsoft JhengHei');
+.fontWorkText {
+  font-family: mtextFont;
+  font-size: 16px;
+  letter-spacing: 1.6px;
 }
-@font-face {
-  font-family: mmlabWebText;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Hind Vadodara'), local('HindVadodara-Regular'), url(https://fonts.gstatic.com/s/hindvadodara/v2/9c6KKeibr6NtFqknnNxZB8I79x-VWsl9ZLFyGx7L0Fo.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* hebrew */
-@font-face {
-  font-family: 'Assistant';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Assistant ExtraBold'), local('Assistant-ExtraBold'), url(https://fonts.gstatic.com/s/assistant/v1/-mTR0sX8a0RsadH4AMDT8EByb1TKJa77egybnpn19yM.woff2) format('woff2');
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
-}
-/* latin */
-@font-face {
-  font-family: 'Assistant';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Assistant ExtraBold'), local('Assistant-ExtraBold'), url(https://fonts.gstatic.com/s/assistant/v1/-mTR0sX8a0RsadH4AMDT8Ogdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* gujarati */
-@font-face {
-  font-family: 'Hind Vadodara';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Hind Vadodara'), local('HindVadodara-Regular'), url(https://fonts.gstatic.com/s/hindvadodara/v2/9c6KKeibr6NtFqknnNxZByUZf6SPjCvTHKwPaGj40_g.woff2) format('woff2');
-  unicode-range: U+0964-0965, U+0A80-0AFF, U+200B-200D, U+20B9, U+25CC, U+A830-A839;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Hind Vadodara';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Hind Vadodara'), local('HindVadodara-Regular'), url(https://fonts.gstatic.com/s/hindvadodara/v2/9c6KKeibr6NtFqknnNxZBxLE1M_n0V67aubpfN9Cf9U.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Hind Vadodara';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Hind Vadodara'), local('HindVadodara-Regular'), url(https://fonts.gstatic.com/s/hindvadodara/v2/9c6KKeibr6NtFqknnNxZB8I79x-VWsl9ZLFyGx7L0Fo.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+.fontLogoTitle {
+  font-family: mtitle1Font;
+  font-size: 40px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
 }
 body {
   background: black;
@@ -70,13 +61,22 @@ body {
   margin: 0;
   padding: 0;
 }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 .center {
   display: block;
   margin: 0px auto;
 }
+#app {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 #_topLogo {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 #_topLogo img {
   width: 32%;
@@ -87,25 +87,118 @@ body {
   left: 0;
   width: 100%;
 }
+@keyframes glitch-anim-left {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes glitch-anim-right {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(1px, -1px);
+  }
+  40% {
+    transform: translate(1px, 1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(-1px, 1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.glitch {
+  position: relative;
+  color: white;
+  z-index: 3;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.glitch:hover::before {
+  animation: glitch-anim-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: red;
+  text-shadow: -1px 0 red;
+  z-index: -2;
+}
+.glitch:hover::after {
+  animation: glitch-anim-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: cyan;
+  text-shadow: 1px 0 cyan;
+  z-index: -1;
+}
+.glitch_always {
+  position: relative;
+  color: white;
+  z-index: 3;
+}
+.glitch_always::before,
+.glitch_always::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.glitch_always::before {
+  animation: glitch-anim-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: red;
+  text-shadow: -1px 0 red;
+  z-index: -2;
+}
+.glitch_always::after {
+  animation: glitch-anim-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: cyan;
+  text-shadow: 1px 0 cyan;
+  z-index: -1;
+}
 .info {
-  display: table;
   position: absolute;
   left: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: red;
+  font-family: mtextFont;
+  font-size: 16px;
+  letter-spacing: 1.6px;
 }
-.info .infoWrap {
-  display: table-row;
+.info .infoWrap > div {
+  padding: 10px 25px;
 }
-.info .infoWrap div {
-  padding: 10px 20px;
-}
-.info .logoName {
-  font-size: 3em;
-  font-family: 'Assistant';
-  line-height: 1em;
-  margin-top: 20px;
+.info .logoWrap {
+  font-family: mtitle1Font;
+  font-size: 40px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 .info .contactInfo {
   display: inline-block;
@@ -126,7 +219,6 @@ body {
   display: inline-block;
 }
 .info .closeInfo {
-  display: table-row;
   width: 100%;
 }
 .info .closeInfo .center {
@@ -135,75 +227,125 @@ body {
 }
 .workList {
   width: 100vw;
-  padding-top: 20px;
   display: block;
 }
 .workList.hide {
   display: none;
 }
-.workList .wrap {
-  margin-left: 6.6vw;
-  margin-right: 6.6vw;
-}
 .workList .workThumb {
-  display: inline-block;
-  width: 42vw;
-  margin-bottom: 2.8vw;
-}
-.workList .workThumb.left {
-  margin-left: 2.8vw;
-}
-.workList .workThumb img {
+  position: relative;
   width: 100%;
+  min-height: 40vw;
+  height: 25vh;
+  overflow: hidden;
+  color: white;
+}
+.workList .workThumb a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: table;
+  overflow: hidden;
+}
+.workList .workThumb a img {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.workList .workThumb a .shadow {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.workList .workThumb a .descript {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.workList .workThumb a .descript .tag {
+  font-family: mtextFont;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  line-height: 180%;
+}
+.workList .workThumb a .descript .titleEn {
+  font-family: mtitle2Font;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.workList .workThumb a .descript .titleCh {
+  font-family: mtextFont;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  line-height: 180%;
 }
 .aWork {
   position: absolute;
   width: 100vw;
   top: 0;
   left: 0;
-  background: blue;
   overflow: scroll;
+  font-family: mtextFont;
+  font-size: 16px;
+  letter-spacing: 1.6px;
 }
 .aWork .wrap {
   width: 86.8%;
   max-height: 100%;
   margin-left: 6.6%;
   margin-right: 6.6%;
+  margin-top: 25px;
 }
-.aWork div,
+.aWork > div,
 .aWork img {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .aWork img:last-child {
   margin-bottom: 25px;
 }
 .aWork .aworkTitle {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .aWork .aworkTitle div {
-  margin-bottom: 0px;
+  margin-top: 10px;
 }
 .aWork .aworkTitle .english {
-  font-size: 2em;
-  line-height: 1em;
-  font-family: 'Assistant';
+  font-family: mtitle1Font;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  padding-right: 25px;
+  margin-top: 0;
 }
 .aWork .aworkTitle .workClose {
   width: auto;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 25px;
+  right: 25px;
+  z-index: 20;
 }
 .aWork .AWorkVideo {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25% !important;
   /* 16:9 */
-  padding-top: 25px;
+  padding-top: 10px;
   height: 0;
+  overflow: hidden;
 }
-.aWork .AWorkVideo iframe {
+.aWork .AWorkVideo iframe,
+.aWork .AWorkVideo img {
   position: absolute;
   top: 0;
   left: 0;

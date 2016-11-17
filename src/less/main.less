@@ -8,14 +8,26 @@ body{
 	padding:0;
 }
 
+a{
+	color:inherit;
+	text-decoration: inherit;
+}
+
+
 .center{
 	display: block;
 	margin:0px auto;
 }
 
+#app{
+	position:absolute;
+	top:0;
+	width: 100%;
+
+}
 #_topLogo{
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: @out_margin + @vert_margin;
+	padding-bottom: @out_margin + @vert_margin;
 
 	img{
 		width:32%;

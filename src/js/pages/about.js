@@ -7,7 +7,9 @@ export default class About extends React.Component{
 		return(
 			<div className="info">
 				<div className="infoWrap">
-					<div className="logoName">Merlin's Mustache Lab</div>
+					<div className="logoWrap">
+						<div className="name" data-text="Merlin's Mustache Lab">Merlin's Mustache Lab</div>
+					</div>
 					<div className="infoChinese">
 					梅林鬍子實驗室相信數位科技是現代世界的魔法。透過科技法術與心靈咒語，創造觸動人心的未來科學。跟著我們一起「梅林的鬍子」吧!    	     	
 					</div>
