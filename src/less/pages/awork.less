@@ -37,15 +37,21 @@
 		// 	opacity: 1;
 			
 		// }
+		>div{
+			width:100%;
+			margin-bottom:@vert_margin;		
+			&:last-child{
+				margin-bottom:@out_margin;	
+			}
+			
+
+		}
+		img{
+			width: 100%;
+		}
 	}
 
-	>div, img{
-		width:100%;
-		margin-bottom:@vert_margin;		
-	}
-	img:last-child{
-		margin-bottom:@out_margin;
-	}
+
 	.aworkTitle{
 		margin-top:@vert_margin;
 		margin-bottom:@vert_margin;

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Link} from 'react-router'
 import Work from './work'
 
-import { RouteTransition } from 'react-router-transition';
+import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 
 export default class Main extends React.Component{
@@ -20,15 +20,15 @@ export default class Main extends React.Component{
 
   	render(){
 		return(
-	    	<div>
-	    		<div id="_topLogo">
-	    			<Link to="/about">
-	    				<img src="image/logo.png" className="center"/>	    			
-	    			</Link>
-	    		</div>
-	    		<Work className="workList"></Work>
-	    	
-	    	</div>
+	    	<ReactCSSTransitionGroup transitionName="sub_page"
+						transitionAppear={true}
+						transitionEnter={true}
+						transitionLeave={true}
+						transitionAppearTimeout={1000}
+						transitionEnterTimeout={1000}
+						transitionLeaveTimeout={1000}>
+					{React.cloneElement(this.props.children,{key:this.props.location.pathname})}	    			
+	    	</ReactCSSTransitionGroup>
 	    );
 		
 	}  

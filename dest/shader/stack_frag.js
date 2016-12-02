@@ -37,7 +37,7 @@ var _stack_fragshader=[
 	"	vec4 cga = texture2D(texture, p);",
 	"	vec4 cb = texture2D(texture, p - offset);",
 	"",
-	"	gl_FragColor = vec4(cga.r+cr.r, cga.g+cb.b, cga.b+cr.r+cb.b,(cga.a+cr.a+cb.a)*.25);",
+	"	gl_FragColor = vec4(cga.r+cr.r, cga.g+cb.b, cga.b+cb.b,(cga.a+cr.a+cb.a)*.25);",
 	"",	
 	"}"
 	].join("\n");

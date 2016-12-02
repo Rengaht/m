@@ -1,0 +1,98 @@
+@appear_interval:.6s;
+
+.info{
+  &.sub_page{
+    &-appear{
+   	  opacity: 0.01;
+      top:-150vh;
+
+      &.sub_page-appear-active{
+        opacity: 1;
+        top:0;
+        transition-duration:@appear_interval;
+        transition-timing-function:ease-in-out;     
+      }
+    }
+    &-enter{
+      opacity: 0.01;
+      top:-150vh;
+
+      &.sub_page-enter-active{
+        top:0;
+        opacity: 1;
+        transition-duration:@appear_interval;
+        transition-timing-function:ease-in-out;     
+      }
+    }
+    &-leave{
+        top:0;
+      opacity: 1;      
+      &.sub_page-leave-active{
+        opacity: 0.01;
+        top:-150vh;
+        transition-duration:@appear_interval;
+        transition-timing-function:ease-in-out;      
+      }
+    }    
+  }
+}
+
+
+// .aWork{
+//   &.sub_page{
+//     &-appear{
+//       // opacity: 0.01;
+//       left:100%;
+
+//       &.sub_page-appear-active{
+//         // opacity: 1;
+//         left:0;
+//         transition-duration:@appear_interval;
+//         transition-timing-function:ease-in-out;     
+//       }
+//     }
+//     &-enter{
+//       // opacity: 0.01;
+//       left:100%;
+
+//       &.sub_page-enter-active{
+//         left:0;
+//         // opacity: 1;
+//         transition-duration:@appear_interval;
+//         transition-timing-function:ease-in-out;     
+//       }
+//     }
+//     &-leave{
+//         left:0;
+//       // opacity: 1;      
+//       &.sub_page-leave-active{
+//         // opacity: 0.01;
+//         left:100%;
+//         transition-duration:@appear_interval;
+//         transition-timing-function:ease-in-out;      
+//       }
+//     }    
+//   }
+// }
+&.sub_page{
+    &-appear, &-enter{
+      opacity: 0.01;
+      // transform:translateY(-200%);
+
+      &-active{
+        opacity: 1;
+        transition-duration:@appear_interval;
+        transition-timing-function:ease-in-out;     
+      }
+    }
+    &-leave{
+      opacity: 1;
+      &-active{
+        opacity: 0.01;
+        // transform:translateY(-200%);
+      
+        transition-duration:@appear_interval/2;
+        transition-timing-function:ease-in-out;      
+      }
+    }
+  }

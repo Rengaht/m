@@ -1,8 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {Link} from 'react-router'
-import * as DConst from '../request_constants'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Link} from 'react-router';
+import * as DConst from '../request_constants';
 
+import FadeReveal from './fade_reveal';
 
 var cachedWorkData=null;
 var cachedFilter=null;
@@ -53,7 +54,7 @@ export default class Work extends React.Component{
 					cachedFilter=filter_;
 
 					console.log("finish load filter: ");
-					console.log(filter_);
+					// console.log(filter_);
 
 					this.loadWork();
 
@@ -80,7 +81,7 @@ export default class Work extends React.Component{
 					
 					
 					console.log("finish load work....");
-					console.log(data.rows);
+					// console.log(data.rows);
 
 					this.setState({data:data.rows});
 					cachedWorkData=data.rows;
@@ -119,7 +120,7 @@ export default class Work extends React.Component{
 				cachedWorkData=load_work;
 
 				console.log("finish load work type junction....");
-				console.log(load_work);
+				//console.log(load_work);
 
 			}.bind(this),
 			error: function(xhr, status, err){
@@ -159,9 +160,16 @@ export default class Work extends React.Component{
 		}
 
 		return(
-			<div className={this.props.className}>		
-				<div className="wrap" ref="_wrap">
-					{workNodes}
+			<div>
+				<div id="_topLogo">
+	    			<Link to="/about">
+	    				<img src="image/logo.png" className="center"/>	    			
+	    			</Link>
+		    	</div>
+				<div className="workList">		
+					<div className="wrap" ref="_wrap">
+						{workNodes}
+					</div>
 				</div>
 			</div>
 		);
@@ -173,7 +181,7 @@ class WorkNode extends React.Component{
 	
 	render(){
 		return(
-			<div className="workThumb">
+			<FadeReveal className="workThumb">
 			<Link to={"/work/"+this.props.work.id}>
 				<img src={this.props.work.thumb_image.url}/>	
 				<div className="shadow"/>
@@ -184,7 +192,7 @@ class WorkNode extends React.Component{
 				</div>
 			</Link>
 
-			</div>
+			</FadeReveal>
 
 		);
 	}

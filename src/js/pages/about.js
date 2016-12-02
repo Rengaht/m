@@ -5,23 +5,26 @@ export default class About extends React.Component{
 
 	render(){
 		return(
+
 			<div className="info">
 				<div className="infoWrap">
 					<div className="logoWrap">
 						<div className="name" data-text="Merlin's Mustache Lab">Merlin's Mustache Lab</div>
 					</div>
 					<div className="infoChinese">
-					梅林鬍子實驗室相信數位科技是現代世界的魔法。透過科技法術與心靈咒語，創造觸動人心的未來科學。跟著我們一起「梅林的鬍子」吧!    	     	
+					“梅林的鬍子啊！”我們時常讚嘆：想像力沒有極限。我們想要透過科技，放大廣告世界的想像力，翻新說故事的方法，開發人類感官尚未觸及的領域！
+現在就跟著我們一起「梅林的鬍子」吧！
 					</div>
 					<div className="infoEnglish">
-					Merlin’s Mustache Lab believes digital technology is the magic of modern real world. Through the wizards of technology and spells of spiritual mind, it creates future emotive science.
-	        Follow us to scream "Merlin's Mustache".
-					</div>
+					“Oh Merlin’s beard!” -  is how we praise the infinite imagination.<br/>
+We aim to amplify imagination for advertising, revitalize storytelling, and explore the unexplored human senses. 
+<br/><br/>
+Let’s “Wow” together!</div>
 					<div className="contactInfo">
 						<div>
 							<span>T</span>
-							<a href="tel:+886-2-8768-1100#135">
-							<span>+886-2-8768-1100#135</span>
+							<a href="tel:+886-2-2718-1133#135">
+							<span>+886-2-2718-1133 #135</span>
 							</a>
 						</div>
 						<div>
@@ -32,8 +35,8 @@ export default class About extends React.Component{
 						</div>
 						<div>
 							<span>A</span>
-							<a href="http://maps.google.com/?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E6%9D%B1%E8%88%88%E8%B7%AF45%E8%99%9F9F">
-							<span>11070 台北市信義區東興路45號9F</span>
+							<a href="http://maps.google.com/?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E5%8D%97%E4%BA%AC%E6%9D%B1%E8%B7%AF%E4%B8%89%E6%AE%B5275%E8%99%9F12%E6%A8%93">
+							<span>10550 台北市松山區南京東路三段275號12樓</span>
 							</a>
 						</div>
 					</div>

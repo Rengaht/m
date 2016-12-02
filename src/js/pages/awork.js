@@ -1,8 +1,9 @@
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {Link} from 'react-router'
-import * as DConst from '../request_constants'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Link} from 'react-router';
+import * as DConst from '../request_constants';
+import FadeReveal from './fade_reveal';
 
 
 export default class AWork extends React.Component{
@@ -12,6 +13,9 @@ export default class AWork extends React.Component{
 		this.state={};
 		this.loadData(this.props.params.id);		
 
+	}
+	componentWillUnmount(){
+		this.setState({work:null,key:null});
 	}
 	loadData(id_){
 		
@@ -42,7 +46,11 @@ export default class AWork extends React.Component{
 
 			var imageNodes=this.state.work.image.rows.map(function(img){
 					return(
-						<img key={img.id} src={DConst.FilePath+img.data.name}/>
+						<FadeReveal key={img.id}>
+							<div>
+							<img src={DConst.FilePath+img.data.name}/>
+							</div>
+						</FadeReveal>
 					);
 			});
 
